@@ -1,445 +1,293 @@
-
 <!DOCTYPE html>
-<html lang="km">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ff5db1">
-<title>SoCute Store 🎀</title>
-<style>
-:root {
-  --pink: #ff5db1;
-  --light: #fff0f8;
-  --dark: #271323;
-  --purple: #a64dff;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #fff8fc;
-  color: var(--dark);
-}
-header {
-  background: linear-gradient(135deg,#ff65b7,#c16aff);
-  color: white;
-  padding: 22px 16px 30px;
-  border-radius: 0 0 28px 28px;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.logo { font-size: 23px; font-weight: 900; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
-.hero { text-align: center; padding: 28px 0 8px; }
-.hero h1 { font-size: 32px; margin: 8px 0; }
-.hero p { line-height: 1.7; }
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 14px;
-  border: 0;
-  background: var(--pink);
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-}
-.hero .btn { background: white; color: #d63391; }
-main { max-width: 1000px; margin: auto; padding: 20px 14px; }
-.section-title { margin: 12px 0 16px; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 13px;
-}
-.card {
-  background: white;
-  border: 1px solid #ffe0f0;
-  border-radius: 19px;
-  padding: 12px;
-  box-shadow: 0 5px 18px #f5cde2a0;
-  overflow: hidden;
-}
-.art {
-  height: 115px;
-  border-radius: 13px;
-  background: linear-gradient(135deg,#ffd4eb,#e9d5ff);
-  display: grid;
-  place-items: center;
-  font-size: 52px;
-}
-.card h3 { font-size: 16px; margin: 12px 0 6px; }
-.desc { color: #806778; font-size: 13px; min-height: 40px; }
-.price { color: #e52d91; font-size: 17px; font-weight: 900; margin: 10px 0; }
-.card .btn { width: 100%; padding: 10px 5px; }
-.info {
-  background: white;
-  border: 1px solid #ffe0f0;
-  border-radius: 18px;
-  padding: 18px;
-  margin-top: 22px;
-  line-height: 1.8;
-}
-footer {
-  text-align: center;
-  padding: 25px 12px;
-  color: #896b80;
-  font-size: 12px;
-}
-@media(min-width:650px) {
-  .products { grid-template-columns: repeat(3,minmax(0,1fr)); }
-  .hero h1 { font-size: 42px; }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#25172f">
+  <meta name="description" content="SoCute Store - Minecraft Premium Accounts">
+  <title>SoCute Store | Minecraft Premium</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff7fc;
+      color: #302238;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #25172f;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #ff8cc9;
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 14px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 20px;
+      background: linear-gradient(135deg, #ffe1f1, #eadbff);
+    }
+
+    .tag {
+      color: #a22b78;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 7vw, 50px);
+      line-height: 1.2;
+      margin: 16px 0;
+    }
+
+    .hero p {
+      max-width: 520px;
+      margin: 0 auto 24px;
+      color: #64546c;
+    }
+
+    .button {
+      display: inline-block;
+      background: #ff72bd;
+      color: #301329;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 22px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #ff9bd1;
+    }
+
+    .products {
+      padding: 45px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #75677b;
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 340px));
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #f1d6e8;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 8px 25px #6c31520d;
+    }
+
+    .product-icon {
+      background: linear-gradient(135deg, #ffdef0, #e7dcff);
+      border-radius: 16px;
+      text-align: center;
+      font-size: 66px;
+      padding: 24px 10px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #716478;
+      margin-bottom: 18px;
+    }
+
+    .price {
+      font-size: 35px;
+      color: #d93691;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .price small {
+      font-size: 14px;
+      color: #8b778e;
+      font-weight: normal;
+    }
+
+    .card .button {
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    .notice {
+      background: #fff0f8;
+      border-radius: 12px;
+      padding: 14px;
+      font-size: 13px;
+      color: #75546a;
+      margin-top: 18px;
+    }
+
+    .steps {
+      background: #f1eaff;
+      padding: 35px 20px;
+      text-align: center;
+    }
+
+    .steps p {
+      margin: 10px auto;
+      max-width: 600px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      background: #25172f;
+      color: #e9ddea;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      header {
+        justify-content: center;
+      }
+
+      nav a {
+        margin: 0 7px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <div class="logo">💗 SoCute Store</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Accounts</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <div class="logo">🎀 SoCute Store</div>
-    <a href="#products">ផលិតផល</a>
-  </nav>
-  <div class="hero">
-    <div style="font-size:38px">🌸 ✨ 🎮</div>
-    <h1>Welcome to SoCute Store</h1>
-    <p>ហាង Gaming តូចស្អាតរបស់អ្នក 💗<br>
-       Discover something cute for your game!</p>
-    <a class="btn" href="#products">មើលផលិតផល ♡</a>
-  </div>
-</header>
+  <main>
+    <section class="hero" id="home">
+      <div class="tag">MINECRAFT GAMING STORE</div>
+      <h1>Your Minecraft<br>Adventure Starts Here!</h1>
+      <p>
+        Welcome to SoCute Store!
+        Browse our Minecraft account listing
+        and contact us to place your order.
+      </p>
+      <a class="button" href="#products">Browse Accounts ↓</a>
+    </section>
 
-<main>
-  <h2 class="section-title" id="products">🌷 ផលិតផលរបស់យើង</h2>
-  <div class="products" id="productList"></div>
+    <section class="products" id="products">
+      <h2 class="section-title">Our Products 🎮</h2>
+      <p class="subtitle">
+        Choose an account and contact us before payment.
+      </p>
 
-  <section class="info">
-    <h2>💌 របៀបទិញ</h2>
-    <p>
-      ១. ជ្រើសរើសផលិតផលដែលអ្នកចូលចិត្ត។<br>
-      ២. ចុចប៊ូតុងទិញឥឡូវ។<br>
-      ៣. ទាក់ទងហាងតាម Telegram ដើម្បីសួរព័ត៌មាន និងបញ្ជាក់ការបញ្ជាទិញ។<br>
-      ៤. សូមពិនិត្យផលិតផល និងតម្លៃមុនពេលបង់ប្រាក់។
-    </p>
-    <a class="btn" id="contactBtn"
-       href="https://t.me/YOUR_TELEGRAM_USERNAME"
-       target="_blank" rel="noopener">
-       💬 ទាក់ទងតាម Telegram
-    </a>
-  </section>
+      <div class="grid">
+        <article class="card">
+          <div class="product-icon">⛏️</div>
 
-  <section class="info">
-    <h3>🔒 សុវត្ថិភាព និងការបញ្ជាក់</h3>
-    <p>
-      សូមកុំផ្ញើពាក្យសម្ងាត់ ឬលេខកូដសុវត្ថិភាពគណនីរបស់អ្នក។
-      ផលិតផលទាំងអស់ត្រូវមានសិទ្ធិចែកចាយ និងលក់ត្រឹមត្រូវ។
-    </p>
-    <p style="font-size:12px">
-      SoCute Store ជាហាងឯករាជ្យ មិនមែនជាហាងផ្លូវការរបស់
-      Minecraft, Mojang ឬ Microsoft ទេ។
-    </p>
-  </section>
-</main>
+          <h3>Minecraft Premium Account</h3>
 
-<footer>
-  © <span id="year"></span> SoCute Store 🎀<br>
-  Made with love 💗
-</footer>
+          <p class="description">
+            Minecraft account listing.
+            Please contact the seller to confirm availability,
+            edition, transfer eligibility and account details.
+          </p>
 
-<script>
-// កែឈ្មោះ តម្លៃ និងការពិពណ៌នាផលិតផលនៅទីនេះ
-const products = [
-  {
-    name: "Custom Skin Design",
-    icon: "👾",
-    description: "សេវារចនា Minecraft Skin ផ្ទាល់ខ្លួន",
-    price: "បញ្ចូលតម្លៃ"
-  },
-  {
-    name: "Custom Texture Pack",
-    icon: "🎨",
-    description: "Texture Pack ដែលបង្កើតដោយខ្លួនឯង",
-    price: "បញ្ចូលតម្លៃ"
-  },
-  {
-    name: "Minecraft Setup Help",
-    icon: "🎮",
-    description: "សេវាជួយរៀបចំការកំណត់ហ្គេម",
-    price: "បញ្ចូលតម្លៃ"
-  }
-];
+          <div class="price">$7 <small>/ account</small></div>
 
-// ប្តូរទៅជា username របស់ហាងពិត
-const telegramUsername = "YOUR_TELEGRAM_USERNAME";
+          <a
+            class="button"
+            href="https://t.me/LooKasie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy Now via Telegram ↗
+          </a>
 
-const productList = document.getElementById("productList");
+          <div class="notice">
+            Contact the seller to confirm all account details
+            and applicable transfer terms before payment.
+          </div>
+        </article>
+      </div>
+    </section>
 
-products.forEach((product) => {
-  const card = document.createElement("article");
-  card.className = "card";
+    <section class="steps">
+      <h2>How to Order 💌</h2>
+      <p>1. Choose the account listing.</p>
+      <p>2. Click Buy Now via Telegram.</p>
+      <p>3. Confirm availability and price with the seller.</p>
+      <p>4. Arrange payment and delivery directly with the seller.</p>
+    </section>
 
-  const art = document.createElement("div");
-  art.className = "art";
-  art.textContent = product.icon;
+    <section class="products" id="contact">
+      <h2 class="section-title">Contact Us 💗</h2>
+      <p class="subtitle">
+        Have questions? Message us directly.
+      </p>
 
-  const name = document.createElement("h3");
-  name.textContent = product.name;
+      <div style="text-align:center">
+        <a
+          class="button"
+          href="https://t.me/LooKasie"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Telegram: @LooKasie ↗
+        </a>
+      </div>
+    </section>
+  </main>
 
-  const desc = document.createElement("p");
-  desc.className = "desc";
-  desc.textContent = product.description;
-
-  const price = document.createElement("div");
-  price.className = "price";
-  price.textContent = product.price;
-
-  const button = document.createElement("a");
-  button.className = "btn";
-  button.textContent = "ទិញឥឡូវ 💗";
-  button.href = "https://t.me/" +
-    encodeURIComponent(telegramUsername) +
-    "?text=" +
-    encodeURIComponent("សួស្តី! ខ្ញុំចង់សួរអំពី " + product.name);
-  button.target = "_blank";
-  button.rel = "noopener";
-
-  card.append(art, name, desc, price, button);
-  productList.appendChild(card);
-});
-
-document.getElementById("contactBtn").href =
-  "https://t.me/" + encodeURIComponent(telegramUsername);
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
+  <footer>
+    <p>© 2026 SoCute Store. All rights reserved.</p>
+    <p>Independent seller; not affiliated with Microsoft or Mojang.</p>
+  </footer>
 </body>
   </html>
   
-<!DOCTYPE html>
-<html lang="km">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ff5db1">
-<title>SoCute Store 🎀</title>
-<style>
-:root {
-  --pink: #ff5db1;
-  --light: #fff0f8;
-  --dark: #271323;
-  --purple: #a64dff;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background: #fff8fc;
-  color: var(--dark);
-}
-header {
-  background: linear-gradient(135deg,#ff65b7,#c16aff);
-  color: white;
-  padding: 22px 16px 30px;
-  border-radius: 0 0 28px 28px;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-.logo { font-size: 23px; font-weight: 900; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
-.hero { text-align: center; padding: 28px 0 8px; }
-.hero h1 { font-size: 32px; margin: 8px 0; }
-.hero p { line-height: 1.7; }
-.btn {
-  display: inline-block;
-  padding: 12px 18px;
-  border-radius: 14px;
-  border: 0;
-  background: var(--pink);
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-}
-.hero .btn { background: white; color: #d63391; }
-main { max-width: 1000px; margin: auto; padding: 20px 14px; }
-.section-title { margin: 12px 0 16px; }
-.products {
-  display: grid;
-  grid-template-columns: repeat(2,minmax(0,1fr));
-  gap: 13px;
-}
-.card {
-  background: white;
-  border: 1px solid #ffe0f0;
-  border-radius: 19px;
-  padding: 12px;
-  box-shadow: 0 5px 18px #f5cde2a0;
-  overflow: hidden;
-}
-.art {
-  height: 115px;
-  border-radius: 13px;
-  background: linear-gradient(135deg,#ffd4eb,#e9d5ff);
-  display: grid;
-  place-items: center;
-  font-size: 52px;
-}
-.card h3 { font-size: 16px; margin: 12px 0 6px; }
-.desc { color: #806778; font-size: 13px; min-height: 40px; }
-.price { color: #e52d91; font-size: 17px; font-weight: 900; margin: 10px 0; }
-.card .btn { width: 100%; padding: 10px 5px; }
-.info {
-  background: white;
-  border: 1px solid #ffe0f0;
-  border-radius: 18px;
-  padding: 18px;
-  margin-top: 22px;
-  line-height: 1.8;
-}
-footer {
-  text-align: center;
-  padding: 25px 12px;
-  color: #896b80;
-  font-size: 12px;
-}
-@media(min-width:650px) {
-  .products { grid-template-columns: repeat(3,minmax(0,1fr)); }
-  .hero h1 { font-size: 42px; }
-}
-</style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <div class="logo">🎀 SoCute Store</div>
-    <a href="#products">ផលិតផល</a>
-  </nav>
-  <div class="hero">
-    <div style="font-size:38px">🌸 ✨ 🎮</div>
-    <h1>Welcome to SoCute Store</h1>
-    <p>ហាង Gaming តូចស្អាតរបស់អ្នក 💗<br>
-       Discover something cute for your game!</p>
-    <a class="btn" href="#products">មើលផលិតផល ♡</a>
-  </div>
-</header>
-
-<main>
-  <h2 class="section-title" id="products">🌷 ផលិតផលរបស់យើង</h2>
-  <div class="products" id="productList"></div>
-
-  <section class="info">
-    <h2>💌 របៀបទិញ</h2>
-    <p>
-      ១. ជ្រើសរើសផលិតផលដែលអ្នកចូលចិត្ត។<br>
-      ២. ចុចប៊ូតុងទិញឥឡូវ។<br>
-      ៣. ទាក់ទងហាងតាម Telegram ដើម្បីសួរព័ត៌មាន និងបញ្ជាក់ការបញ្ជាទិញ។<br>
-      ៤. សូមពិនិត្យផលិតផល និងតម្លៃមុនពេលបង់ប្រាក់។
-    </p>
-    <a class="btn" id="contactBtn"
-       href="https://t.me/YOUR_TELEGRAM_USERNAME"
-       target="_blank" rel="noopener">
-       💬 ទាក់ទងតាម Telegram
-    </a>
-  </section>
-
-  <section class="info">
-    <h3>🔒 សុវត្ថិភាព និងការបញ្ជាក់</h3>
-    <p>
-      សូមកុំផ្ញើពាក្យសម្ងាត់ ឬលេខកូដសុវត្ថិភាពគណនីរបស់អ្នក។
-      ផលិតផលទាំងអស់ត្រូវមានសិទ្ធិចែកចាយ និងលក់ត្រឹមត្រូវ។
-    </p>
-    <p style="font-size:12px">
-      SoCute Store ជាហាងឯករាជ្យ មិនមែនជាហាងផ្លូវការរបស់
-      Minecraft, Mojang ឬ Microsoft ទេ។
-    </p>
-  </section>
-</main>
-
-<footer>
-  © <span id="year"></span> SoCute Store 🎀<br>
-  Made with love 💗
-</footer>
-
-<script>
-// កែឈ្មោះ តម្លៃ និងការពិពណ៌នាផលិតផលនៅទីនេះ
-const products = [
-  {
-    name: "Custom Skin Design",
-    icon: "👾",
-    description: "សេវារចនា Minecraft Skin ផ្ទាល់ខ្លួន",
-    price: "បញ្ចូលតម្លៃ"
-  },
-  {
-    name: "Custom Texture Pack",
-    icon: "🎨",
-    description: "Texture Pack ដែលបង្កើតដោយខ្លួនឯង",
-    price: "បញ្ចូលតម្លៃ"
-  },
-  {
-    name: "Minecraft Setup Help",
-    icon: "🎮",
-    description: "សេវាជួយរៀបចំការកំណត់ហ្គេម",
-    price: "បញ្ចូលតម្លៃ"
-  }
-];
-
-// ប្តូរទៅជា username របស់ហាងពិត
-const telegramUsername = "YOUR_TELEGRAM_USERNAME";
-
-const productList = document.getElementById("productList");
-
-products.forEach((product) => {
-  const card = document.createElement("article");
-  card.className = "card";
-
-  const art = document.createElement("div");
-  art.className = "art";
-  art.textContent = product.icon;
-
-  const name = document.createElement("h3");
-  name.textContent = product.name;
-
-  const desc = document.createElement("p");
-  desc.className = "desc";
-  desc.textContent = product.description;
-
-  const price = document.createElement("div");
-  price.className = "price";
-  price.textContent = product.price;
-
-  const button = document.createElement("a");
-  button.className = "btn";
-  button.textContent = "ទិញឥឡូវ 💗";
-  button.href = "https://t.me/" +
-    encodeURIComponent(telegramUsername) +
-    "?text=" +
-    encodeURIComponent("សួស្តី! ខ្ញុំចង់សួរអំពី " + product.name);
-  button.target = "_blank";
-  button.rel = "noopener";
-
-  card.append(art, name, desc, price, button);
-  productList.appendChild(card);
-});
-
-document.getElementById("contactBtn").href =
-  "https://t.me/" + encodeURIComponent(telegramUsername);
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-</script>
-</body>
-</html>
-
