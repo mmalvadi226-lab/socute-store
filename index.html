@@ -1,21 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="km">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#241329">
-  <meta name="description" content="SoCute Store - Minecraft Premium Account Shop">
-  <title>SoCute Store | Pink Minecraft Shop</title>
+  <meta name="description" content="SoCute Store - ហាងលក់គណនី Minecraft Premium">
+  <title>SoCute Store | ហាង Minecraft</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@400;700&family=Koulen&family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --pink: #ff79c6;
-      --pink-light: #ffd1ec;
       --pink-dark: #d83e98;
       --purple: #382044;
       --bg: #fff6fc;
@@ -34,14 +32,10 @@
     }
 
     body {
-      font-family: 'Rajdhani', Arial, sans-serif;
+      font-family: 'Battambang', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      -webkit-tap-highlight-color: transparent;
+      line-height: 1.9;
     }
 
     header {
@@ -49,15 +43,14 @@
       top: 0;
       z-index: 10;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 15px;
-      padding: 17px 6%;
-      color: white;
-      background: rgba(36, 19, 41, 0.97);
-      border-bottom: 2px solid var(--pink);
-      box-shadow: 0 5px 25px #21102720;
+      gap: 12px;
+      padding: 14px 5%;
+      background: #241329;
+      border-bottom: 3px solid var(--pink);
+      box-shadow: 0 5px 20px #24132920;
     }
 
     .brand {
@@ -65,50 +58,49 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
-      color: white;
     }
 
     .logo-cube {
-      position: relative;
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      color: #70224e;
       background: #ff9cda;
       border: 3px solid #fff0fa;
       box-shadow: 4px 4px 0 #b52d7c;
-      display: grid;
-      place-items: center;
-      font-size: 23px;
-      color: #6e2150;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 20px;
     }
 
     .logo-text {
-      font-family: 'Press Start 2P', monospace;
-      font-size: clamp(10px, 2.2vw, 15px);
-      line-height: 1.8;
       color: var(--pink);
-      text-shadow: 2px 2px 0 #8f2865;
+      font-family: 'Press Start 2P', monospace;
+      font-size: clamp(10px, 2vw, 14px);
+      line-height: 1.8;
+      text-shadow: 2px 2px #8f2865;
     }
 
-    .logo-text span {
+    .logo-text small {
       display: block;
       color: white;
-      font-size: 9px;
+      font-family: 'Battambang', sans-serif;
+      font-size: 12px;
       text-shadow: none;
-      letter-spacing: 1px;
     }
 
     nav {
       display: flex;
       flex-wrap: wrap;
-      gap: 17px;
+      gap: 15px;
     }
 
     nav a {
       color: #ffe7f6;
+      font-size: 14px;
+      font-weight: bold;
       text-decoration: none;
-      font-size: 17px;
-      font-weight: 700;
     }
 
     nav a:hover {
@@ -116,36 +108,31 @@
     }
 
     .hero {
-      position: relative;
-      overflow: hidden;
       text-align: center;
-      padding: 85px 20px 90px;
+      padding: 65px 18px 75px;
       background:
-        radial-gradient(ellipse at top left, #ffbde5 0, transparent 55%),
+        radial-gradient(ellipse at top left, #ffbde5, transparent 60%),
         linear-gradient(135deg, #ffe6f4, #eee0ff);
       border-bottom: 5px solid #f7b0db;
     }
 
     .pixel-label {
       display: inline-block;
-      padding: 10px 12px;
+      padding: 6px 12px;
       color: #87245f;
       background: #fff7fc;
       border: 2px solid #ed8ac5;
       box-shadow: 4px 4px 0 #d75aa6;
-      font-family: 'Press Start 2P', monospace;
-      font-size: 9px;
-      line-height: 1.9;
+      font-size: 13px;
+      font-weight: bold;
     }
 
     .hero h1 {
-      max-width: 850px;
-      margin: 30px auto 20px;
-      font-family: 'Press Start 2P', monospace;
-      font-size: clamp(19px, 4.2vw, 35px);
-      line-height: 1.9;
+      margin: 25px auto 15px;
+      font-family: 'Koulen', sans-serif;
+      font-size: clamp(36px, 8vw, 58px);
+      line-height: 1.5;
       color: #512746;
-      text-shadow: 3px 3px 0 #ffafd9;
     }
 
     .hero h1 span {
@@ -153,66 +140,60 @@
     }
 
     .hero p {
-      max-width: 540px;
-      margin: 0 auto 30px;
-      font-size: 19px;
+      max-width: 600px;
+      margin: 0 auto 25px;
       color: #705b79;
+      font-size: 16px;
     }
 
     .button {
       display: inline-flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       gap: 8px;
-      padding: 13px 22px;
+      padding: 11px 20px;
       border: 2px solid #ffb8df;
-      border-radius: 5px;
+      border-radius: 6px;
       background: var(--pink);
       color: #32152b;
-      font-size: 18px;
-      font-weight: 700;
+      font-family: 'Battambang', sans-serif;
+      font-size: 15px;
+      font-weight: bold;
       text-decoration: none;
       box-shadow: 0 5px 0 #bc347f;
-      transition: transform .15s, box-shadow .15s;
+      transition: transform .15s;
     }
 
     .button:hover {
       transform: translateY(-2px);
-      box-shadow: 0 7px 0 #bc347f;
-    }
-
-    .button:active {
-      transform: translateY(3px);
-      box-shadow: 0 2px 0 #bc347f;
     }
 
     .products {
-      max-width: 1050px;
+      max-width: 1000px;
       margin: auto;
-      padding: 65px 20px;
+      padding: 50px 18px;
     }
 
     .section-title {
       text-align: center;
-      font-family: 'Press Start 2P', monospace;
-      font-size: clamp(15px, 3vw, 22px);
-      line-height: 1.9;
-      margin-bottom: 12px;
+      font-family: 'Koulen', sans-serif;
+      font-size: 32px;
+      line-height: 1.7;
       color: #542847;
     }
 
     .subtitle {
       text-align: center;
-      margin: 0 auto 35px;
+      margin: 0 auto 28px;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 15px;
     }
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 360px));
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 350px));
       justify-content: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .card {
@@ -220,76 +201,75 @@
       padding: 22px;
       background: white;
       border: 2px solid #f4c4e1;
-      border-radius: 9px;
-      box-shadow: 7px 7px 0 #f2d5e8;
+      border-radius: 10px;
+      box-shadow: 6px 6px 0 #f2d5e8;
     }
 
     .product-art {
-      position: relative;
       display: grid;
       place-items: center;
-      min-height: 195px;
-      margin-bottom: 23px;
-      background:
-        linear-gradient(135deg, #ffe0f1, #eadfff);
+      min-height: 175px;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #ffe0f1, #eadfff);
       border: 2px solid #f4c0e0;
     }
 
     .pixel-block {
-      width: 90px;
-      height: 90px;
+      width: 85px;
+      height: 85px;
       display: grid;
       place-items: center;
       background: #ff91d0;
       border: 6px solid #ffe8f7;
       outline: 4px solid #c34a96;
-      box-shadow: 10px 10px 0 #d1a5d0;
-      font-size: 44px;
+      box-shadow: 9px 9px 0 #d1a5d0;
+      font-size: 40px;
       transform: rotate(-4deg);
     }
 
     .card h3 {
-      font-size: 23px;
-      line-height: 1.3;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      line-height: 1.8;
     }
 
     .description {
+      margin-bottom: 15px;
       color: var(--muted);
-      font-size: 17px;
-      margin-bottom: 18px;
+      font-size: 14px;
     }
 
     .price {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       color: var(--pink-dark);
-      font-size: 42px;
-      line-height: 1.2;
-      font-weight: 700;
+      font-family: 'Battambang', sans-serif;
+      font-size: 34px;
+      font-weight: bold;
     }
 
     .price small {
-      font-size: 15px;
       color: var(--muted);
-      font-weight: 500;
+      font-size: 13px;
+      font-weight: normal;
     }
 
     .buy-button {
+      display: flex;
       width: 100%;
       text-align: center;
     }
 
     .notice {
-      margin-top: 20px;
-      padding: 14px;
+      margin-top: 18px;
+      padding: 12px;
       border-left: 4px solid var(--pink-dark);
       background: #fff0f8;
       color: #75566e;
-      font-size: 15px;
+      font-size: 13px;
     }
 
     .how {
-      padding: 55px 20px;
+      padding: 45px 18px;
       text-align: center;
       background: #f1e8ff;
       border-top: 2px solid #e4c9ff;
@@ -297,64 +277,63 @@
     }
 
     .steps {
-      max-width: 600px;
-      margin: 25px auto 0;
+      max-width: 650px;
+      margin: 20px auto 0;
       display: grid;
-      gap: 14px;
+      gap: 12px;
       text-align: left;
     }
 
     .step {
-      padding: 13px 16px;
+      padding: 12px 15px;
       background: white;
       border: 1px solid #e5c6ef;
-      border-radius: 5px;
-      font-size: 17px;
+      border-radius: 6px;
+      font-size: 14px;
     }
 
     .contact {
+      padding: 50px 18px;
       text-align: center;
-      padding: 60px 20px;
     }
 
     .contact p {
-      margin: 15px auto 25px;
+      margin: 12px auto 23px;
       color: var(--muted);
-      font-size: 18px;
+      font-size: 15px;
     }
 
     footer {
-      padding: 28px 15px;
+      padding: 25px 15px;
       text-align: center;
       color: #fce7f5;
       background: var(--purple);
       border-top: 4px solid var(--pink);
-      font-size: 15px;
+      font-size: 12px;
     }
 
     footer p + p {
-      margin-top: 8px;
+      margin-top: 5px;
       color: #d8bfd9;
     }
 
     @media (max-width: 600px) {
       header {
         justify-content: center;
-        padding: 15px 10px;
       }
 
       nav {
         width: 100%;
         justify-content: center;
-        gap: 20px;
+        gap: 18px;
       }
 
       .hero {
-        padding: 60px 16px;
+        padding: 50px 15px;
       }
 
       .products {
-        padding: 45px 16px;
+        padding: 40px 15px;
       }
     }
   </style>
@@ -362,46 +341,45 @@
 
 <body>
   <header>
-    <a class="brand" href="#home" aria-label="SoCute Store home">
-      <div class="logo-cube" aria-hidden="true">S</div>
+    <a class="brand" href="#home">
+      <div class="logo-cube">S</div>
       <div class="logo-text">
         SoCute Store
-        <span>MINECRAFT SHOP</span>
+        <small>ហាងលក់គណនី Minecraft</small>
       </div>
     </a>
 
-    <nav aria-label="Main navigation">
-      <a href="#home">Home</a>
-      <a href="#products">Accounts</a>
-      <a href="#contact">Contact</a>
+    <nav>
+      <a href="#home">ទំព័រដើម</a>
+      <a href="#products">ផលិតផល</a>
+      <a href="#contact">ទាក់ទងយើង</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="pixel-label">✦ PINK GAMING STORE ✦</div>
+      <div class="pixel-label">💗 ហាងហ្គេមពណ៌ផ្កាឈូក 💗</div>
 
       <h1>
-        YOUR MINECRAFT<br>
-        <span>ADVENTURE!</span>
+        សូមស្វាគមន៍មកកាន់<br>
+        <span>SoCute Store</span>
       </h1>
 
       <p>
-        Welcome to SoCute Store 💗
-        Browse our Minecraft account listing
-        and contact the seller to place your order.
+        ហាងរបស់យើងផ្ដល់ព័ត៌មានអំពីគណនី Minecraft។
+        សូមជ្រើសរើសផលិតផល ហើយទាក់ទងអ្នកលក់
+        ដើម្បីសួរព័ត៌មាន និងបញ្ជាទិញ។
       </p>
 
       <a class="button" href="#products">
-        ⛏ Browse Accounts
+        ⛏️ មើលផលិតផល
       </a>
     </section>
 
     <section class="products" id="products">
-      <h2 class="section-title">OUR PRODUCTS</h2>
-
+      <h2 class="section-title">ផលិតផលរបស់យើង</h2>
       <p class="subtitle">
-        Find your next Minecraft adventure 🎮
+        ជ្រើសរើសផលិតផលដែលអ្នកចាប់អារម្មណ៍ 🎮
       </p>
 
       <div class="product-grid">
@@ -410,15 +388,16 @@
             <div class="pixel-block" aria-hidden="true">⛏️</div>
           </div>
 
-          <h3>Minecraft Premium Account</h3>
+          <h3>គណនី Minecraft Premium</h3>
 
           <p class="description">
-            Contact the seller to confirm the edition,
-            availability, account details and transfer eligibility.
+            សូមទាក់ទងអ្នកលក់ដើម្បីសួរអំពីប្រភេទហ្គេម
+            ស្ថានភាពគណនី ភាពអាចផ្ទេរបាន
+            និងព័ត៌មានផលិតផលមុនពេលទិញ។
           </p>
 
           <div class="price">
-            $7 <small>USD / account</small>
+            $7 <small>ដុល្លារ / គណនី</small>
           </div>
 
           <a
@@ -427,33 +406,33 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            💗 Buy Now via Telegram
+            💗 ទិញតាម Telegram
           </a>
 
           <div class="notice">
-            Please confirm the product details and applicable
-            transfer terms with the seller before payment.
+            សូមបញ្ជាក់តម្លៃ ព័ត៌មានគណនី និងលក្ខខណ្ឌផ្ទេរ
+            ជាមួយអ្នកលក់ឱ្យបានច្បាស់ មុនពេលបង់ប្រាក់។
           </div>
         </article>
       </div>
     </section>
 
     <section class="how">
-      <h2 class="section-title">HOW TO ORDER</h2>
+      <h2 class="section-title">របៀបទិញ</h2>
 
       <div class="steps">
-        <div class="step">💗 <strong>Step 1:</strong> Choose an account listing.</div>
-        <div class="step">📱 <strong>Step 2:</strong> Message the seller on Telegram.</div>
-        <div class="step">✅ <strong>Step 3:</strong> Confirm price and availability.</div>
-        <div class="step">📦 <strong>Step 4:</strong> Arrange delivery directly with the seller.</div>
+        <div class="step">💗 <strong>ជំហានទី ១៖</strong> ជ្រើសរើសផលិតផលដែលអ្នកចង់បាន។</div>
+        <div class="step">📱 <strong>ជំហានទី ២៖</strong> ចុចប៊ូតុងទិញតាម Telegram។</div>
+        <div class="step">✅ <strong>ជំហានទី ៣៖</strong> សួរតម្លៃ និងបញ្ជាក់ថាមានផលិតផលឬអត់។</div>
+        <div class="step">📦 <strong>ជំហានទី ៤៖</strong> ព្រមព្រៀងរបៀបទូទាត់ និងប្រគល់ផលិតផលជាមួយអ្នកលក់។</div>
       </div>
     </section>
 
     <section class="contact" id="contact">
-      <h2 class="section-title">CONTACT US</h2>
+      <h2 class="section-title">ទាក់ទងអ្នកលក់</h2>
 
       <p>
-        Have questions? We are available on Telegram.
+        មានសំណួរមែនទេ? សូមផ្ញើសារមកយើងតាម Telegram។
       </p>
 
       <a
@@ -462,14 +441,15 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        ✉ Telegram: @LooKasie
+        ✉️ Telegram: @LooKasie
       </a>
     </section>
   </main>
 
   <footer>
-    <p>💗 © 2026 SoCute Store</p>
-    <p>Independent seller. Not affiliated with Microsoft or Mojang.</p>
+    <p>💗 © 2026 SoCute Store រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    <p>ហាងឯករាជ្យ មិនមែនជាផ្នែកផ្លូវការរបស់ Microsoft ឬ Mojang ទេ។</p>
   </footer>
 </body>
-</html>
+  </html>
+
